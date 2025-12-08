@@ -6,284 +6,215 @@
 <title>Platinum Dental Clinic – World Class Dental Care</title>
 
 <!-- SEO -->
-<meta name="description" content="Platinum Dental Clinic offers world-class dental care, cosmetic dentistry, smile makeovers, implants, orthodontics, and complete oral healthcare services across Kenya.">
-<meta name="keywords" content="Dental Clinic Kenya, Platinum Dental, Smile Makeover, Dentist Kisumu, Dentist Nairobi, Cosmetic Dentistry">
+<meta name="description" content="Platinum Dental Clinic delivers world-class smile makeovers, implants, orthodontics, pediatric dentistry, cosmetic treatments, and advanced dental surgery with international standards in Kenya.">
+<meta name="keywords" content="Dental Clinic Kenya, Smile Makeover, Best Dentist Nairobi, Best Dentist Kisumu, Cosmetic Dentistry, Platinum Dental">
 <meta name="author" content="Platinum Dental Clinic">
 
-<!-- Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
-<style>
+<!-- Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-/* ============ GLOBAL THEME ============ */
-:root {
-    --green: #008000;
-    --red: #D40000;
-    --white: #FFFFFF;
-    --dark: #111111;
-    --light: #F8F9FA;
-    --text-dark: #222;
-    --text-light: #fff;
-    --accent: #20C997;
-    --radius: 14px;
-}
+<link rel="stylesheet" href="styles.css">
+<script defer src="script.js"></script>
 
-* {
-    margin: 0; padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-}
-
-body {
-    font-family: "Poppins", sans-serif;
-    background: var(--white);
-    color: var(--text-dark);
-    line-height: 1.7;
-}
-
-/* ============ HEADER ================= */
-header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background: var(--white);
-    padding: 18px 10%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 9999;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
-
-header h1 {
-    font-size: 26px;
-    font-weight: 700;
-    color: var(--green);
-}
-
-nav a {
-    margin: 0 18px;
-    text-decoration: none;
-    color: var(--dark);
-    font-weight: 600;
-    transition: 0.3s;
-}
-nav a:hover { color: var(--green); }
-
-/* ============ HERO SLIDER ============ */
-.hero {
-    height: 100vh;
-    background-size: cover;
-    background-position: center;
-    animation: slider 18s infinite ease-in-out;
-}
-@keyframes slider {
-    0% { background-image: url('https://images.pexels.com/photos/3845807/pexels-photo-3845807.jpeg'); }
-    33% { background-image: url('https://images.pexels.com/photos/4269692/pexels-photo-4269692.jpeg'); }
-    66% { background-image: url('https://images.pexels.com/photos/5327654/pexels-photo-5327654.jpeg'); }
-    100% { background-image: url('https://images.pexels.com/photos/3845807/pexels-photo-3845807.jpeg'); }
-}
-
-.hero-text {
-    position: absolute;
-    bottom: 20%;
-    left: 8%;
-    color: var(--white);
-    font-size: 60px;
-    font-weight: 700;
-    max-width: 600px;
-    text-shadow: 0 0 12px #000;
-}
-
-/* ============ SECTIONS ============ */
-section {
-    padding: 100px 10%;
-}
-
-h2.section-title {
-    font-size: 36px;
-    font-weight: 700;
-    color: var(--green);
-    margin-bottom: 25px;
-}
-
-/* ============ SERVICES ============ */
-.services {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 25px;
-}
-
-.service-card {
-    background: var(--white);
-    padding: 25px;
-    border-radius: var(--radius);
-    box-shadow: 0 4px 18px rgba(0,0,0,0.1);
-    text-align: center;
-    transition: 0.3s;
-}
-.service-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-}
-
-.service-card h3 {
-    margin-bottom: 10px;
-}
-
-/* ============ BRANCHES ============ */
-.branch-box {
-    margin-bottom: 20px;
-    padding: 20px;
-    background: var(--light);
-    border-radius: var(--radius);
-}
-
-/* ============ TEAM ============ */
-.team {
-    display: flex;
-    gap: 30px;
-    flex-wrap: wrap;
-}
-
-.doctor {
-    flex: 1;
-    min-width: 260px;
-    background: var(--white);
-    border-radius: var(--radius);
-    padding: 20px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-}
-
-/* ============ CONTACT ============ */
-.contact-box {
-    background: var(--light);
-    padding: 35px;
-    border-radius: var(--radius);
-}
-
-/* ============ FOOTER ============ */
-footer {
-    background: var(--dark);
-    color: var(--white);
-    padding: 40px;
-    text-align: center;
-}
-
-/* ============ WHATSAPP BUTTON ============ */
-.whatsapp {
-    position: fixed;
-    bottom: 25px;
-    right: 25px;
-    background: #25D366;
-    padding: 18px 22px;
-    color: #fff;
-    border-radius: 50px;
-    font-size: 18px;
-    font-weight: bold;
-    text-decoration: none;
-    box-shadow: 0 4px 14px rgba(0,0,0,0.2);
-}
-
-/* ============ DARK MODE ============ */
-.dark-toggle {
-    cursor: pointer;
-    padding: 10px 18px;
-    border-radius: 8px;
-    background: var(--red);
-    color: var(--white);
-    font-weight: 600;
-}
-
-body.dark-mode {
-    background: var(--dark);
-    color: var(--white);
-}
-body.dark-mode header {
-    background: #000;
-}
-body.dark-mode nav a {
-    color: #fff;
-}
-body.dark-mode .service-card,
-body.dark-mode .doctor,
-body.dark-mode .contact-box,
-body.dark-mode .branch-box {
-    background: #222;
-    color: #fff;
-}
-</style>
+<!-- GSAP Animations -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
 </head>
 <body>
 
-<!-- HEADER -->
-<header>
-    <h1>Platinum Dental Clinic</h1>
-    <nav>
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#team">Team</a>
-        <a href="#branches">Branches</a>
-        <a href="#contact">Contact</a>
-    </nav>
-    <div class="dark-toggle" onclick="toggleDark()">Dark/Light</div>
-</header>
-
-<!-- HERO -->
-<div class="hero">
-    <div class="hero-text">World-Class Dental Care<br> Because Your Smile Matters</div>
+<!-- QUICK ACTION BUTTONS -->
+<div class="quick-actions">
+    <a href="tel:+254732224624" class="action-btn call"><i class="fa fa-phone"></i></a>
+    <a href="https://wa.me/254732224624" class="action-btn whatsapp"><i class="fa fa-whatsapp"></i></a>
+    <a href="#booking" class="action-btn book"><i class="fa fa-calendar"></i></a>
 </div>
 
+<!-- HEADER -->
+<header>
+    <h1 class="logo-text"><i class="fa fa-tooth"></i> Platinum Dental Clinic</h1>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#team">Team</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <div class="dark-toggle" onclick="toggleDark()">🌙</div>
+</header>
+
+<!-- HERO SECTION WITH OVERLAY -->
+<section id="home" class="hero-section">
+    <div class="overlay"></div>
+    <div class="hero-content">
+        <h1>World-Class Dental Care</h1>
+        <p>Because Your Smile Deserves Only the Best</p>
+        <a href="#booking" class="btn primary">Book Appointment</a>
+        <a href="#services" class="btn outline">Explore Services</a>
+    </div>
+</section>
+
+<!-- COUNTERS (World-Class Feature) -->
+<section class="counters">
+    <div class="counter-box">
+        <h2 class="counter" data-target="15">0</h2>
+        <p>Years of Excellence</p>
+    </div>
+    <div class="counter-box">
+        <h2 class="counter" data-target="25000">0</h2>
+        <p>Smiles Transformed</p>
+    </div>
+    <div class="counter-box">
+        <h2 class="counter" data-target="12">0</h2>
+        <p>Specialized Dentists</p>
+    </div>
+</section>
+
 <!-- ABOUT -->
-<section id="about">
-    <h2 class="section-title">About Us</h2>
-    <p>
-        Platinum Dental Clinic is a premier dental care provider offering world-class dental services across Kenya.
-        We combine modern technology, expert dentists, and compassionate care to deliver healthy, beautiful smiles.
-    </p>
+<section id="about" class="about-section">
+    <h2 class="section-title">Why Choose Us?</h2>
+    <div class="about-grid">
+        <div>
+            <h3>International Standard Dentistry</h3>
+            <p>Our clinic combines world-class technology, expert dentists, digital imaging, AI-based smile design, and painless procedures.</p>
+            <h3>Digital Dentistry & Smile Design</h3>
+            <p>We use 3D dental scanners, AI smile simulations, and digital treatment planning for the best results.</p>
+        </div>
+        <div>
+            <img src="https://images.pexels.com/photos/4269692/pexels-photo-4269692.jpeg" class="about-img">
+        </div>
+    </div>
 </section>
 
 <!-- SERVICES -->
 <section id="services">
-    <h2 class="section-title">Our Services</h2>
+    <h2 class="section-title">Our World-Class Services</h2>
+    <div class="service-grid">
 
-    <div class="services">
-        <div class="service-card"><h3>Cosmetic Dentistry</h3><p>Teeth whitening, bonding, veneers.</p></div>
-        <div class="service-card"><h3>Orthodontics</h3><p>Braces, aligners, full smile correction.</p></div>
-        <div class="service-card"><h3>Dental Implants</h3><p>Advanced implants with perfect aesthetics.</p></div>
-        <div class="service-card"><h3>Root Canal</h3><p>Pain-free, precise, modern treatment.</p></div>
-        <div class="service-card"><h3>Smile Makeover</h3><p>Hollywood smile transformations.</p></div>
-        <div class="service-card"><h3>General Dentistry</h3><p>Cleaning, fillings, checkups.</p></div>
+        <div class="service-card">
+            <i class="fa fa-star service-icon"></i>
+            <h3>Smile Makeover</h3>
+            <p>Hollywood smile transformations using veneers, whitening, bonding & digital smile design.</p>
+        </div>
+
+        <div class="service-card">
+            <i class="fa fa-teeth service-icon"></i>
+            <h3>Dental Implants</h3>
+            <p>Premium implants with 3D-guided surgery for perfect long-lasting results.</p>
+        </div>
+
+        <div class="service-card">
+            <i class="fa fa-teeth-open service-icon"></i>
+            <h3>Orthodontics</h3>
+            <p>Braces & clear aligners to align teeth with precision and comfort.</p>
+        </div>
+
+        <div class="service-card">
+            <i class="fa fa-child service-icon"></i>
+            <h3>Pediatric Dentistry</h3>
+            <p>Child-friendly dentistry to ensure your kids enjoy every visit.</p>
+        </div>
+
+        <div class="service-card">
+            <i class="fa fa-syringe service-icon"></i>
+            <h3>Pain-Free Root Canal</h3>
+            <p>Modern, painless, fast RC procedures using advanced endodontic tools.</p>
+        </div>
+
+        <div class="service-card">
+            <i class="fa fa-tooth service-icon"></i>
+            <h3>General Dentistry</h3>
+            <p>Cleaning, fillings, gum care, preventive treatment & X-ray diagnostics.</p>
+        </div>
+
     </div>
 </section>
 
 <!-- TEAM -->
 <section id="team">
     <h2 class="section-title">Meet Our Specialists</h2>
-    <div class="team">
-        <div class="doctor">
+
+    <div class="team-grid">
+        <div class="doctor-card">
+            <img src="https://source.unsplash.com/600x600/?dentist" alt="">
             <h3>Dr. Shem Rakewa</h3>
-            <p>Senior Cosmetic Dentist • 12+ years experience</p>
+            <p>Senior Cosmetic Dentist</p>
         </div>
-        <div class="doctor">
+
+        <div class="doctor-card">
+            <img src="https://source.unsplash.com/600x600/?doctor" alt="">
             <h3>Dr. Smile</h3>
-            <p>Orthodontist • Braces & Aligners Expert</p>
+            <p>Orthodontist</p>
         </div>
-        <div class="doctor">
+
+        <div class="doctor-card">
+            <img src="https://source.unsplash.com/600x600/?surgeon" alt="">
             <h3>Dr. Care</h3>
-            <p>Implant Specialist • Smile Restoration</p>
+            <p>Implant Specialist</p>
         </div>
     </div>
 </section>
 
-<!-- BRANCHES -->
-<section id="branches">
-    <h2 class="section-title">Our Branches</h2>
+<!-- SMILE GALLERY -->
+<section id="gallery">
+    <h2 class="section-title">Smile Gallery (Before & After)</h2>
+    <div class="gallery-grid">
+        <img src="https://source.unsplash.com/600x400/?smile,teeth">
+        <img src="https://source.unsplash.com/600x400/?veneers,dental">
+        <img src="https://source.unsplash.com/600x400/?teeth,whitening">
+        <img src="https://source.unsplash.com/600x400/?clinic,dental">
+    </div>
+</section>
 
-    <div class="branch-box"><b>Kisumu Branch:</b> Megacity Mall, Nairobi Road, Ground Floor</div>
-    <div class="branch-box"><b>Nairobi Branch:</b> Freedom Heights Mall, Lang’ata Road, Mezzanine Floor</div>
-    <div class="branch-box"><b>Platinum HQ:</b> P.O. Box 386-40100</div>
+<!-- TESTIMONIALS -->
+<section id="testimonials">
+    <h2 class="section-title">What Our Patients Say</h2>
+
+    <div class="testimonial-slider">
+        <div class="testimony active">“Amazing smile transformation! The best dental experience ever.”</div>
+        <div class="testimony">“Pain-free root canal! I couldn’t believe how comfortable it was.”</div>
+        <div class="testimony">“The doctors are friendly, professional, and highly skilled.”</div>
+    </div>
+
+    <div class="testimonial-nav">
+        <span onclick="showTestimonial(0)"></span>
+        <span onclick="showTestimonial(1)"></span>
+        <span onclick="showTestimonial(2)"></span>
+    </div>
+</section>
+
+<!-- BOOKING -->
+<section id="booking">
+    <h2 class="section-title">Book Appointment</h2>
+    <form class="booking-form" id="bookingForm">
+
+        <div class="form-grid">
+            <input type="text" name="name" placeholder="Full Name" required>
+            <input type="tel" name="phone" placeholder="Phone (WhatsApp)" required>
+            <select name="branch" required>
+                <option value="">Choose Branch</option>
+                <option>Kisumu</option>
+                <option>Nairobi</option>
+            </select>
+            <select name="service" required>
+                <option value="">Select Service</option>
+                <option>Smile Makeover</option>
+                <option>Implants</option>
+                <option>Braces</option>
+                <option>Cleaning</option>
+                <option>Emergency</option>
+            </select>
+            <input type="date" name="date" required>
+        </div>
+
+        <textarea name="notes" rows="3" placeholder="Notes (Optional)"></textarea>
+        <button type="submit" class="btn primary full">Send to WhatsApp</button>
+
+    </form>
 </section>
 
 <!-- CONTACT -->
@@ -294,22 +225,13 @@ body.dark-mode .branch-box {
         <p><b>Phone:</b> 0732 224624 / 0768 020319</p>
         <p><b>Facebook:</b> Platinum Dental Clinic</p>
         <p><b>Instagram:</b> @platinumdentalclinic</p>
-        <p><b>Twitter:</b> @platinumdental</p>
     </div>
 </section>
 
+<!-- FOOTER -->
 <footer>
-    © 2025 Platinum Dental Clinic – All Rights Reserved  
+    © 2025 Platinum Dental Clinic – All Rights Reserved
 </footer>
-
-<!-- WHATSAPP -->
-<a href="https://wa.me/254769285959" class="whatsapp">Chat on WhatsApp</a>
-
-<script>
-function toggleDark() {
-    document.body.classList.toggle("dark-mode");
-}
-</script>
 
 </body>
 </html>
