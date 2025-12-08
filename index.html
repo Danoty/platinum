@@ -1,550 +1,766 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Platinum Dental Clinic – World Class Dental Care</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Platinum Dental Clinic – World Class Dental Care</title>
 
-<!-- SEO -->
-<meta name="description" content="Platinum Dental Clinic delivers world-class smile makeovers, implants, orthodontics, pediatric dentistry, cosmetic treatments, and advanced dental surgery using international standards in Kenya.">
-<meta name="keywords" content="Dental Clinic Kenya, Smile Makeover, Best Dentist Nairobi, Best Dentist Kisumu, Cosmetic Dentistry, Platinum Dental">
-<meta name="author" content="Platinum Dental Clinic">
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Platinum Dental Clinic offers world-class dental care, cosmetic dentistry, implants, orthodontics, smile makeovers and full oral healthcare across Kenya.">
+  <meta name="keywords" content="Dental Clinic Kenya, Smile Makeover, Dentist Nairobi, Dentist Kisumu, Cosmetic Dentistry">
+  <meta name="author" content="Platinum Dental Clinic">
 
-<!-- Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-<!-- Icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    /* ========== RESET & GLOBAL ========== */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      color: #222;
+      background: #ffffff;
+      line-height: 1.6;
+    }
+    a { text-decoration: none; color: inherit; }
 
-<style>
-/* =======================================================
-   WORLD CLASS DENTAL WEBSITE – PREMIUM UI THEME
-========================================================= */
+    /* ========== HEADER / NAVBAR ========== */
+    header {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      background: rgba(255,255,255,0.96);
+      backdrop-filter: blur(6px);
+      padding: 14px 8%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      z-index: 1000;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .logo-text {
+      font-size: 22px;
+      font-weight: 700;
+      color: #008000;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    header nav {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      font-size: 0.95rem;
+    }
+    header nav a {
+      font-weight: 600;
+      color: #111;
+      position: relative;
+    }
+    header nav a::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      width: 0;
+      height: 2px;
+      background: #008000;
+      transition: width 0.25s;
+    }
+    header nav a:hover::after {
+      width: 100%;
+    }
+    .dark-toggle {
+      margin-left: 12px;
+      padding: 6px 12px;
+      border-radius: 999px;
+      border: none;
+      background: #111;
+      color: #fff;
+      font-size: 0.85rem;
+      cursor: pointer;
+    }
 
-:root {
-    --green: #008000;
-    --red: #D40000;
-    --white: #FFFFFF;
-    --dark: #111111;
-    --light: #F8F9FA;
-    --accent: #20C997;
-    --radius: 16px;
-    --shadow: 0px 8px 25px rgba(0,0,0,0.12);
-    --glass: rgba(255,255,255,0.65);
-}
+    /* push content below fixed header */
+    main { padding-top: 90px; }
 
-* {
-    margin: 0; padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-    font-family: "Poppins", sans-serif;
-}
+    /* ========== HERO (Image 1) ========== */
+    .hero {
+      height: 90vh;
+      background: url('https://source.unsplash.com/1600x900/?dental,clinic') center/cover no-repeat;
+      position: relative;
+      display: flex;
+      align-items: center;
+      color: #fff;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(120deg, rgba(0,0,0,0.65), rgba(0,0,0,0.25));
+    }
+    .hero-content {
+      position: relative;
+      padding-left: 8%;
+      max-width: 640px;
+    }
+    .hero h1 {
+      font-size: clamp(2.5rem, 6vw, 3.6rem);
+      font-weight: 800;
+      line-height: 1.1;
+    }
+    .hero p {
+      margin: 16px 0 26px;
+      font-size: 1.05rem;
+    }
 
-/* ================= BODY ================= */
-body {
-    background: var(--white);
-    color: #222;
-    line-height: 1.7;
-}
+    .btn {
+      display: inline-block;
+      padding: 12px 20px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      border: 2px solid transparent;
+      transition: 0.25s;
+    }
+    .btn.primary {
+      background: #008000;
+      color: #fff;
+    }
+    .btn.primary:hover { opacity: 0.9; }
+    .btn.outline {
+      background: transparent;
+      color: #fff;
+      border-color: #fff;
+      margin-left: 8px;
+    }
+    .btn.outline:hover {
+      background: #ffffff;
+      color: #008000;
+    }
+    .btn.full {
+      width: 100%;
+      text-align: center;
+    }
 
-/* ================= QUICK ACTION ================= */
-.quick-actions {
-    position: fixed;
-    bottom: 25px;
-    right: 25px;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    z-index: 999;
-}
+    /* ========== QUICK ACTION FLOATING BUTTONS ========== */
+    .quick-actions {
+      position: fixed;
+      right: 16px;
+      bottom: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      z-index: 1100;
+    }
+    .action-btn {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+      font-size: 20px;
+    }
+    .action-btn.call { background: #008000; }
+    .action-btn.whatsapp { background: #25D366; }
+    .action-btn.book { background: #D40000; }
 
-.action-btn {
-    width: 55px;
-    height: 55px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-size: 22px;
-    text-decoration: none;
-    box-shadow: var(--shadow);
-}
-.action-btn.call { background: var(--red); }
-.action-btn.whatsapp { background: #25D366; }
-.action-btn.book { background: var(--green); }
+    /* ========== SECTIONS ========== */
+    section {
+      padding: 80px 8%;
+    }
+    .section-title {
+      text-align: center;
+      font-size: 2.1rem;
+      font-weight: 700;
+      color: #008000;
+      margin-bottom: 40px;
+    }
 
-/* ================= HEADER ================= */
-header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background: var(--glass);
-    backdrop-filter: blur(12px);
-    padding: 18px 10%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 999;
-    box-shadow: var(--shadow);
-}
+    /* ========== ABOUT + STATS (Image 2) ========== */
+    .about-grid {
+      display: grid;
+      grid-template-columns: minmax(0,1.2fr) minmax(0,1fr);
+      gap: 30px;
+      align-items: center;
+    }
+    .about-grid h3 {
+      margin-bottom: 8px;
+      font-size: 1.2rem;
+      color: #008000;
+    }
+    .about-grid p { margin-bottom: 18px; }
+    .about-img {
+      width: 100%;
+      border-radius: 14px;
+      box-shadow: 0 10px 28px rgba(0,0,0,0.2);
+    }
+    .stats-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-top: 10px;
+    }
+    .stat-box {
+      flex: 1;
+      min-width: 120px;
+      background: #f3faf6;
+      border-radius: 12px;
+      padding: 14px 16px;
+      text-align: center;
+    }
+    .stat-box .counter {
+      display: block;
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: #008000;
+    }
 
-header .logo-text {
-    font-size: 26px;
-    font-weight: 800;
-    color: var(--green);
-}
+    /* ========== SERVICES GRID ========== */
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+      gap: 24px;
+    }
+    .service-card {
+      background: #fff;
+      padding: 24px;
+      border-radius: 12px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+      text-align: center;
+      transition: transform 0.25s, box-shadow 0.25s;
+    }
+    .service-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+    }
+    .service-card i {
+      font-size: 40px;
+      color: #008000;
+      margin-bottom: 14px;
+    }
+    .service-card h3 {
+      margin-bottom: 10px;
+      font-size: 1.2rem;
+    }
 
-nav a {
-    margin: 0 18px;
-    text-decoration: none;
-    color: var(--dark);
-    font-weight: 600;
-    transition: 0.3s;
-}
-nav a:hover { color: var(--green); }
+    /* ========== TEAM (Images 3,4,5) ========== */
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
+      gap: 24px;
+    }
+    .doctor-card {
+      background: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+      text-align: center;
+    }
+    .doctor-card img {
+      width: 100%;
+      display: block;
+    }
+    .doctor-card h3 {
+      margin: 14px 0 4px;
+      font-size: 1.25rem;
+      color: #008000;
+    }
+    .doctor-card p {
+      padding: 0 16px 16px;
+      color: #555;
+      font-size: 0.95rem;
+    }
 
-.dark-toggle {
-    cursor: pointer;
-    background: var(--dark);
-    color: white;
-    padding: 10px 18px;
-    border-radius: var(--radius);
-}
+    /* ========== GALLERY (Images 6–17) ========== */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px,1fr));
+      gap: 14px;
+    }
+    .gallery-grid img {
+      width: 100%;
+      display: block;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    }
 
-/* ================= HERO ================= */
-.hero-section {
-    height: 100vh;
-    background: url('https://images.pexels.com/photos/3845807/pexels-photo-3845807.jpeg');
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-}
+    /* ========== BRANCHES (Images 18,19) ========== */
+    .branches-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+      gap: 24px;
+    }
+    .branch-card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 8px 22px rgba(0,0,0,0.08);
+      overflow: hidden;
+    }
+    .branch-card img {
+      width: 100%;
+      height: 170px;
+      object-fit: cover;
+      display: block;
+    }
+    .branch-card .branch-body {
+      padding: 16px;
+    }
+    .branch-card h3 {
+      color: #008000;
+      margin-bottom: 4px;
+    }
+    .branch-card p {
+      font-size: 0.95rem;
+      margin-bottom: 8px;
+    }
 
-.overlay {
-    position: absolute;
-    inset: 0;
-    background: rgba(0,0,0,0.55);
-}
+    /* ========== TESTIMONIALS (Image 20 via background) ========== */
+    #testimonials {
+      background: url('https://source.unsplash.com/1200x600/?happy,smile') center/cover no-repeat fixed;
+      position: relative;
+      color: #fff;
+    }
+    #testimonials::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.65);
+    }
+    #testimonials .section-title {
+      color: #fff;
+      position: relative;
+      z-index: 1;
+    }
+    .testimonial-slider {
+      max-width: 720px;
+      margin: auto;
+      position: relative;
+      text-align: center;
+      z-index: 1;
+    }
+    .testimony {
+      display: none;
+      background: rgba(0,0,0,0.45);
+      padding: 26px;
+      border-radius: 12px;
+      font-style: italic;
+      font-size: 1.05rem;
+    }
+    .testimony.active { display: block; }
+    .testimonial-nav {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 18px;
+    }
+    .testimonial-nav span {
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: #fff;
+      opacity: 0.4;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .testimonial-nav span.active { opacity: 1; }
 
-.hero-content {
-    position: relative;
-    color: white;
-    max-width: 600px;
-    padding-left: 10%;
-}
+    /* ========== BOOKING ========== */
+    .booking-form {
+      max-width: 720px;
+      margin: auto;
+      background: #f7f9fa;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+    }
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px,1fr));
+      gap: 16px;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 12px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 0.95rem;
+    }
+    textarea {
+      min-height: 100px;
+      resize: vertical;
+    }
 
-.hero-content h1 {
-    font-size: 60px;
-    font-weight: 800;
-    line-height: 1.1;
-}
+    /* ========== CONTACT & FOOTER ========== */
+    .contact-box {
+      max-width: 640px;
+      margin: auto;
+      background: #f7f9fa;
+      padding: 26px;
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+      text-align: center;
+    }
+    footer {
+      background: #111;
+      color: #fff;
+      text-align: center;
+      padding: 32px 8%;
+      font-size: 0.9rem;
+    }
 
-.hero-content p {
-    margin: 15px 0 25px;
-    font-size: 20px;
-}
+    /* ========== DARK MODE ========== */
+    body.dark-mode {
+      background: #050608;
+      color: #f5f5f5;
+    }
+    body.dark-mode header {
+      background: rgba(0,0,0,0.96);
+      box-shadow: 0 4px 16px rgba(0,0,0,0.6);
+    }
+    body.dark-mode section {
+      background: transparent;
+    }
+    body.dark-mode .service-card,
+    body.dark-mode .doctor-card,
+    body.dark-mode .branch-card,
+    body.dark-mode .booking-form,
+    body.dark-mode .contact-box {
+      background: #121316;
+      color: #f5f5f5;
+      box-shadow: 0 8px 22px rgba(0,0,0,0.8);
+    }
+    body.dark-mode .stat-box {
+      background: #17191d;
+    }
 
-.btn {
-    display: inline-block;
-    padding: 14px 22px;
-    border-radius: var(--radius);
-    font-weight: 700;
-    text-decoration: none;
-    transition: 0.3s;
-}
-
-.btn.primary {
-    background: var(--green);
-    color: white;
-}
-.btn.primary:hover { opacity: 0.85; }
-
-.btn.outline {
-    background: transparent;
-    border: 2px solid white;
-    color: white;
-}
-
-/* ================ SECTIONS ================= */
-section { padding: 100px 10%; }
-
-.section-title {
-    font-size: 36px;
-    font-weight: 800;
-    color: var(--green);
-    text-align: center;
-    margin-bottom: 35px;
-}
-
-/* ================ COUNTERS ================= */
-.counters {
-    display: flex;
-    justify-content: space-around;
-    text-align: center;
-    padding: 80px 0;
-    background: var(--light);
-}
-
-.counter-box h2 {
-    font-size: 42px;
-    color: var(--green);
-}
-
-/* ================ ABOUT ================= */
-.about-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 40px;
-}
-
-.about-img {
-    width: 100%;
-    border-radius: var(--radius);
-    box-shadow: var(--shadow);
-}
-
-/* ================ SERVICES ================= */
-.service-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 25px;
-}
-
-.service-card {
-    background: white;
-    padding: 25px;
-    border-radius: var(--radius);
-    box-shadow: var(--shadow);
-    transition: 0.3s;
-    text-align: center;
-}
-.service-card:hover { transform: translateY(-10px); }
-
-.service-icon {
-    font-size: 40px;
-    color: var(--green);
-    margin-bottom: 10px;
-}
-
-/* ================ TEAM ================= */
-.team-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 25px;
-}
-
-.doctor-card img {
-    width: 100%;
-    border-radius: var(--radius);
-    box-shadow: var(--shadow);
-}
-
-/* ================ GALLERY ================= */
-.gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 18px;
-}
-
-.gallery-grid img {
-    width: 100%;
-    border-radius: var(--radius);
-}
-
-/* ================ TESTIMONIALS ================= */
-.testimonial-slider {
-    max-width: 700px;
-    margin: auto;
-    text-align: center;
-}
-
-.testimony {
-    display: none;
-    font-size: 22px;
-    background: var(--light);
-    padding: 30px;
-    border-radius: var(--radius);
-    box-shadow: var(--shadow);
-}
-.testimony.active { display: block; }
-
-.testimonial-nav {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 20px;
-}
-
-.testimonial-nav span {
-    width: 15px;
-    height: 15px;
-    background: var(--green);
-    border-radius: 50%;
-    cursor: pointer;
-}
-
-/* ================ BOOKING ================= */
-.booking-form {
-    max-width: 700px;
-    margin: auto;
-    background: var(--light);
-    padding: 30px;
-    border-radius: var(--radius);
-    box-shadow: var(--shadow);
-}
-
-.form-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-}
-
-input, select, textarea {
-    width: 100%;
-    padding: 14px;
-    border-radius: var(--radius);
-    border: 1px solid #ddd;
-}
-
-textarea { resize: none; }
-
-.btn.full {
-    width: 100%;
-    margin-top: 20px;
-}
-
-/* ================ CONTACT ================= */
-.contact-box {
-    text-align: center;
-    background: var(--light);
-    padding: 40px;
-    border-radius: var(--radius);
-    box-shadow: var(--shadow);
-}
-
-/* ================ FOOTER ================= */
-footer {
-    background: var(--dark);
-    color: white;
-    padding: 40px;
-    text-align: center;
-}
-
-/* ================ DARK MODE ================= */
-body.dark-mode { background: #000; color: white; }
-body.dark-mode nav a { color: white; }
-body.dark-mode .service-card,
-body.dark-mode .doctor-card,
-body.dark-mode .booking-form,
-body.dark-mode .contact-box {
-    background: #222;
-    color: white;
-}
-</style>
-
+    /* ========== RESPONSIVE ========== */
+    @media (max-width: 768px) {
+      header {
+        padding: 12px 5%;
+        flex-direction: column;
+        gap: 10px;
+      }
+      header nav {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .hero {
+        height: 80vh;
+      }
+      .hero-content {
+        padding-left: 5%;
+        padding-right: 5%;
+      }
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
 <body>
 
-<!-- QUICK ACTION BUTTONS -->
-<div class="quick-actions">
-    <a href="tel:+254732224624" class="action-btn call"><i class="fa fa-phone"></i></a>
-    <a href="https://wa.me/254732224624" class="action-btn whatsapp"><i class="fa fa-whatsapp"></i></a>
-    <a href="#booking" class="action-btn book"><i class="fa fa-calendar"></i></a>
-</div>
+  <!-- QUICK ACTION FLOATING BUTTONS -->
+  <div class="quick-actions">
+    <a href="tel:+254732224624" class="action-btn call" title="Call Platinum Dental">
+      <i class="fa fa-phone"></i>
+    </a>
+    <a href="https://wa.me/254732224624" target="_blank" class="action-btn whatsapp" title="WhatsApp Chat">
+      <i class="fa-brands fa-whatsapp"></i>
+    </a>
+    <a href="#booking" class="action-btn book" title="Book Appointment">
+      <i class="fa fa-calendar-check"></i>
+    </a>
+  </div>
 
-<!-- HEADER -->
-<header>
-    <h1 class="logo-text"><i class="fa fa-tooth"></i> Platinum Dental Clinic</h1>
+  <!-- HEADER / NAVBAR -->
+  <header>
+    <div class="logo-text">
+      <i class="fa-solid fa-tooth"></i>
+      Platinum Dental Clinic
+    </div>
     <nav>
-        <a href="#home">Home</a>
-        <a href="#services">Services</a>
-        <a href="#team">Team</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#testimonials">Testimonials</a>
-        <a href="#contact">Contact</a>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#team">Team</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#branches">Branches</a>
+      <a href="#testimonials">Testimonials</a>
+      <a href="#contact">Contact</a>
     </nav>
-    <div class="dark-toggle" onclick="toggleDark()">🌙</div>
-</header>
+    <button class="dark-toggle" onclick="toggleDark()">🌙 Dark</button>
+  </header>
 
-<!-- HERO -->
-<section id="home" class="hero-section">
-    <div class="overlay"></div>
-    <div class="hero-content">
-        <h1>World-Class Dental Care</h1>
-        <p>Because Your Smile Deserves Only the Best</p>
+  <main>
+    <!-- HERO (Image 1) -->
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <h1>World-Class Dental Care in Kenya</h1>
+        <p>Because your smile deserves international-standard dentistry, modern technology and compassionate experts.</p>
         <a href="#booking" class="btn primary">Book Appointment</a>
-        <a href="#services" class="btn outline">Explore Services</a>
-    </div>
-</section>
+        <a href="#services" class="btn outline">View Services</a>
+      </div>
+    </section>
 
-<!-- COUNTERS -->
-<section class="counters">
-    <div class="counter-box"><h2 class="counter" data-target="15">0</h2><p>Years of Excellence</p></div>
-    <div class="counter-box"><h2 class="counter" data-target="25000">0</h2><p>Smiles Transformed</p></div>
-    <div class="counter-box"><h2 class="counter" data-target="12">0</h2><p>Specialized Dentists</p></div>
-</section>
-
-<!-- ABOUT -->
-<section id="about">
-    <h2 class="section-title">Why Choose Us?</h2>
-    <div class="about-grid">
+    <!-- ABOUT (Image 2) -->
+    <section id="about">
+      <h2 class="section-title">Why Choose Platinum Dental?</h2>
+      <div class="about-grid">
         <div>
-            <h3>International Standard Dentistry</h3>
-            <p>We combine advanced dental tech, expert doctors, painless procedures & AI smile design.</p>
+          <h3>International-Standard Dentistry</h3>
+          <p>We combine advanced equipment, digital imaging and evidence-based protocols to deliver predictable, beautiful results.</p>
+
+          <h3>Comfort, Safety & Transparency</h3>
+          <p>Pain-managed procedures, strict infection control and honest treatment plans with clear pricing.</p>
+
+          <div class="stats-row">
+            <div class="stat-box">
+              <span class="counter" data-target="2">0</span>
+              Branches
+            </div>
+            <div class="stat-box">
+              <span class="counter" data-target="10000">0</span>
+              Smiles Enhanced
+            </div>
+            <div class="stat-box">
+              <span class="counter" data-target="4.9">0</span>
+              Star Rating
+            </div>
+          </div>
         </div>
-        <div><img class="about-img" src="https://images.pexels.com/photos/4269692/pexels-photo-4269692.jpeg"></div>
-    </div>
-</section>
+        <div>
+          <img class="about-img" src="https://source.unsplash.com/800x600/?dentist,tools" alt="Modern dental equipment">
+        </div>
+      </div>
+    </section>
 
-<!-- SERVICES -->
-<section id="services">
-    <h2 class="section-title">Our World-Class Services</h2>
-    <div class="service-grid">
+    <!-- SERVICES -->
+    <section id="services">
+      <h2 class="section-title">Our Services</h2>
+      <div class="services">
+        <div class="service-card">
+          <i class="fa-solid fa-star"></i>
+          <h3>Smile Makeover</h3>
+          <p>Veneers, whitening, bonding and full cosmetic smile transformations.</p>
+        </div>
+        <div class="service-card">
+          <i class="fa-solid fa-tooth"></i>
+          <h3>Dental Implants</h3>
+          <p>3D-guided implants and fixed teeth solutions for missing teeth.</p>
+        </div>
+        <div class="service-card">
+          <i class="fa-solid fa-teeth"></i>
+          <h3>Orthodontics</h3>
+          <p>Metal and clear braces, aligners and jaw correction for all ages.</p>
+        </div>
+        <div class="service-card">
+          <i class="fa-solid fa-child"></i>
+          <h3>Pediatric Dentistry</h3>
+          <p>Gentle, fun and educational visits that kids actually enjoy.</p>
+        </div>
+        <div class="service-card">
+          <i class="fa-solid fa-syringe"></i>
+          <h3>Pain-Free Root Canal</h3>
+          <p>Modern endodontic treatment focused on comfort and precision.</p>
+        </div>
+        <div class="service-card">
+          <i class="fa-solid fa-tooth"></i>
+          <h3>General Dentistry</h3>
+          <p>Cleaning, fillings, gum care, preventive checkups and X-rays.</p>
+        </div>
+      </div>
+    </section>
 
-        <div class="service-card"><i class="fa fa-star service-icon"></i><h3>Smile Makeover</h3><p>Hollywood smile transformations using veneers, whitening & digital design.</p></div>
-        <div class="service-card"><i class="fa fa-teeth service-icon"></i><h3>Dental Implants</h3><p>Premium implants with 3D-guided surgery.</p></div>
-        <div class="service-card"><i class="fa fa-teeth-open service-icon"></i><h3>Orthodontics</h3><p>Braces & clear aligners.</p></div>
-        <div class="service-card"><i class="fa fa-child service-icon"></i><h3>Pediatric Dentistry</h3><p>Kids-friendly dentistry.</p></div>
-        <div class="service-card"><i class="fa fa-syringe service-icon"></i><h3>Pain-Free Root Canal</h3><p>Modern, fast & painless.</p></div>
-        <div class="service-card"><i class="fa fa-tooth service-icon"></i><h3>General Dentistry</h3><p>Cleaning, fillings, gum care.</p></div>
+    <!-- TEAM (Images 3–5) -->
+    <section id="team">
+      <h2 class="section-title">Meet Our Specialists</h2>
+      <div class="team-grid">
+        <div class="doctor-card">
+          <img src="https://source.unsplash.com/600x600/?dentist,portrait" alt="Cosmetic dentist">
+          <h3>Dr. Shem Rakewa</h3>
+          <p>Senior Cosmetic Dentist • Smile Design & Veneers</p>
+        </div>
+        <div class="doctor-card">
+          <img src="https://source.unsplash.com/600x600/?orthodontist" alt="Orthodontist">
+          <h3>Dr. Smile</h3>
+          <p>Orthodontist • Braces & Clear Aligners Expert</p>
+        </div>
+        <div class="doctor-card">
+          <img src="https://source.unsplash.com/600x600/?dental,surgeon" alt="Implant specialist">
+          <h3>Dr. Care</h3>
+          <p>Implant & Oral Surgery Specialist</p>
+        </div>
+      </div>
+    </section>
 
-    </div>
-</section>
+    <!-- GALLERY (Images 6–17) -->
+    <section id="gallery">
+      <h2 class="section-title">Smile Gallery & Clinic Moments</h2>
+      <div class="gallery-grid">
+        <img src="https://source.unsplash.com/600x400/?smile,teeth" alt="Smile 1">
+        <img src="https://source.unsplash.com/600x400/?teeth,whitening" alt="Whitening">
+        <img src="https://source.unsplash.com/600x400/?dental,chair" alt="Dental chair">
+        <img src="https://source.unsplash.com/600x400/?xray,dental" alt="Dental X-ray">
+        <img src="https://source.unsplash.com/600x400/?dental,clinic" alt="Clinic interior">
+        <img src="https://source.unsplash.com/600x400/?dental,hygiene" alt="Hygiene">
+        <img src="https://source.unsplash.com/600x400/?tooth,implant" alt="Implant">
+        <img src="https://source.unsplash.com/600x400/?braces,teeth" alt="Braces">
+        <img src="https://source.unsplash.com/600x400/?kid,dentist" alt="Kids dentistry">
+        <img src="https://source.unsplash.com/600x400/?dental,assistant" alt="Dental assistant">
+        <img src="https://source.unsplash.com/600x400/?oral,health" alt="Oral health">
+        <img src="https://source.unsplash.com/600x400/?smile,patient" alt="Happy patient">
+      </div>
+    </section>
 
-<!-- TEAM -->
-<section id="team">
-    <h2 class="section-title">Meet Our Specialists</h2>
+    <!-- BRANCHES (Images 18–19) -->
+    <section id="branches">
+      <h2 class="section-title">Our Branches</h2>
+      <div class="branches-grid">
+        <div class="branch-card">
+          <img src="https://source.unsplash.com/600x400/?reception,dental" alt="Reception Kisumu">
+          <div class="branch-body">
+            <h3>Kisumu – Megacity Mall</h3>
+            <p>Megacity Mall, Nairobi Road, Ground Floor</p>
+            <p><strong>Hours:</strong> Mon–Sat 8:00am – 6:00pm</p>
+          </div>
+        </div>
+        <div class="branch-card">
+          <img src="https://source.unsplash.com/600x400/?waiting-room,dental" alt="Reception Nairobi">
+          <div class="branch-body">
+            <h3>Nairobi – Freedom Heights</h3>
+            <p>Freedom Heights Mall, Lang’ata Road, Mezzanine Floor</p>
+            <p><strong>Hours:</strong> Mon–Sat 8:00am – 6:00pm</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <div class="team-grid">
-        <div class="doctor-card"><img src="https://source.unsplash.com/600x600/?dentist"><h3>Dr. Shem Rakewa</h3><p>Senior Cosmetic Dentist</p></div>
-        <div class="doctor-card"><img src="https://source.unsplash.com/600x600/?doctor"><h3>Dr. Smile</h3><p>Orthodontist</p></div>
-        <div class="doctor-card"><img src="https://source.unsplash.com/600x600/?surgeon"><h3>Dr. Care</h3><p>Implant Specialist</p></div>
-    </div>
-</section>
-
-<!-- GALLERY -->
-<section id="gallery">
-    <h2 class="section-title">Smile Gallery</h2>
-    <div class="gallery-grid">
-        <img src="https://source.unsplash.com/600x400/?smile,teeth">
-        <img src="https://source.unsplash.com/600x400/?veneers,dental">
-        <img src="https://source.unsplash.com/600x400/?whitening,teeth">
-        <img src="https://source.unsplash.com/600x400/?clinic,dental">
-    </div>
-</section>
-
-<!-- TESTIMONIALS -->
-<section id="testimonials">
-    <h2 class="section-title">What Our Patients Say</h2>
-
-    <div class="testimonial-slider">
-        <div class="testimony active">“Amazing smile transformation! The best dental experience ever.”</div>
-        <div class="testimony">“Pain-free root canal! I couldn’t believe how comfortable it was.”</div>
-        <div class="testimony">“The doctors are friendly, professional, and highly skilled.”</div>
-    </div>
-
-    <div class="testimonial-nav">
-        <span onclick="showTestimonial(0)"></span>
+    <!-- TESTIMONIALS (Image 20 as background) -->
+    <section id="testimonials">
+      <h2 class="section-title">What Our Patients Say</h2>
+      <div class="testimonial-slider">
+        <div class="testimony active">
+          “My smile makeover changed my confidence completely. Gentle, professional and world-class service.”
+        </div>
+        <div class="testimony">
+          “I had a pain-free root canal and same-day relief. Platinum Dental is now my family clinic of choice.”
+        </div>
+        <div class="testimony">
+          “Beautiful clinic, friendly staff and very clean. The kids actually look forward to their visits!”
+        </div>
+      </div>
+      <div class="testimonial-nav">
+        <span class="active" onclick="showTestimonial(0)"></span>
         <span onclick="showTestimonial(1)"></span>
         <span onclick="showTestimonial(2)"></span>
-    </div>
-</section>
+      </div>
+    </section>
 
-<!-- BOOKING -->
-<section id="booking">
-    <h2 class="section-title">Book Appointment</h2>
-    <form class="booking-form" id="bookingForm">
-
+    <!-- BOOKING -->
+    <section id="booking">
+      <h2 class="section-title">Book an Appointment</h2>
+      <form class="booking-form" id="bookingForm">
         <div class="form-grid">
-            <input type="text" name="name" placeholder="Full Name" required>
-            <input type="tel" name="phone" placeholder="Phone (WhatsApp)" required>
-            <select name="branch" required>
-                <option value="">Choose Branch</option>
-                <option>Kisumu</option>
-                <option>Nairobi</option>
-            </select>
-            <select name="service" required>
-                <option value="">Select Service</option>
-                <option>Smile Makeover</option>
-                <option>Implants</option>
-                <option>Braces</option>
-                <option>Cleaning</option>
-                <option>Emergency</option>
-            </select>
-            <input type="date" name="date" required>
+          <input type="text" name="name" placeholder="Full Name" required>
+          <input type="tel" name="phone" placeholder="Phone (WhatsApp)" required>
+          <select name="branch" required>
+            <option value="">Choose Branch</option>
+            <option>Kisumu</option>
+            <option>Nairobi</option>
+          </select>
+          <select name="service" required>
+            <option value="">Select Service</option>
+            <option>Smile Makeover</option>
+            <option>Implants</option>
+            <option>Braces / Aligners</option>
+            <option>Cleaning / Checkup</option>
+            <option>Emergency</option>
+          </select>
+          <input type="date" name="date" required>
         </div>
+        <textarea name="notes" placeholder="Notes (optional)"></textarea>
+        <button type="submit" class="btn primary full">Send Request via WhatsApp</button>
+      </form>
+    </section>
 
-        <textarea name="notes" rows="3" placeholder="Notes (Optional)"></textarea>
-        <button type="submit" class="btn primary full">Send to WhatsApp</button>
+    <!-- CONTACT -->
+    <section id="contact">
+      <h2 class="section-title">Contact Us</h2>
+      <div class="contact-box">
+        <p><strong>Email:</strong> info@platinumdental.co.ke</p>
+        <p><strong>Phone:</strong> 0732 224624 / 0768 020319</p>
+        <p><strong>Facebook:</strong> Platinum Dental Clinic</p>
+        <p><strong>Instagram:</strong> @platinumdentalclinic</p>
+      </div>
+    </section>
+  </main>
 
-    </form>
-</section>
+  <!-- FOOTER -->
+  <footer>
+    © 2025 Platinum Dental Clinic — All Rights Reserved
+  </footer>
 
-<!-- CONTACT -->
-<section id="contact">
-    <h2 class="section-title">Contact Us</h2>
-    <div class="contact-box">
-        <p><b>Email:</b> info@platinumdental.co.ke</p>
-        <p><b>Phone:</b> 0732 224624 / 0768 020319</p>
-        <p><b>Facebook:</b> Platinum Dental Clinic</p>
-        <p><b>Instagram:</b> @platinumdentalclinic</p>
-    </div>
-</section>
-
-<!-- FOOTER -->
-<footer>
-    © 2025 Platinum Dental Clinic – All Rights Reserved
-</footer>
-
-<!-- JS -->
-<script>
-// Dark Mode
-function toggleDark() { document.body.classList.toggle("dark-mode"); }
-
-// Counters
-document.querySelectorAll(".counter").forEach(counter=>{
-    let target = +counter.dataset.target;
-    let c = 0;
-    let step = target / 200;
-    function run(){
-        c += step;
-        if(c < target){
-            counter.innerText = Math.floor(c);
-            requestAnimationFrame(run);
-        } else counter.innerText = target;
+  <script>
+    // Dark mode toggle
+    function toggleDark() {
+      document.body.classList.toggle('dark-mode');
     }
-    run();
-});
 
-// Testimonials
-let current=0;
-function showTestimonial(i){
-    let t=document.querySelectorAll(".testimony");
-    t[current].classList.remove("active");
-    current=i;
-    t[i].classList.add("active");
-}
+    // Stats counter
+    document.querySelectorAll('.counter').forEach(el => {
+      const target = parseFloat(el.getAttribute('data-target'));
+      let current = 0;
+      const step = target / 200;
+      const update = () => {
+        if (current < target) {
+          current += step;
+          el.textContent = target % 1 === 0 ? Math.ceil(current) : current.toFixed(1);
+          requestAnimationFrame(update);
+        } else {
+          el.textContent = target;
+        }
+      };
+      update();
+    });
 
-// WhatsApp Form
-document.getElementById("bookingForm").addEventListener("submit", function(e){
-    e.preventDefault();
-    let data = new FormData(this);
-    let msg = 
-`APPOINTMENT REQUEST:
-Name: ${data.get("name")}
-Phone: ${data.get("phone")}
-Branch: ${data.get("branch")}
-Service: ${data.get("service")}
-Date: ${data.get("date")}
-Notes: ${data.get("notes")}`;
+    // Testimonials slider
+    let currTestimony = 0;
+    function showTestimonial(i) {
+      const items = document.querySelectorAll('.testimony');
+      const dots = document.querySelectorAll('.testimonial-nav span');
+      if (!items.length) return;
+      items[currTestimony].classList.remove('active');
+      dots[currTestimony].classList.remove('active');
+      currTestimony = i;
+      items[currTestimony].classList.add('active');
+      dots[currTestimony].classList.add('active');
+    }
+    setInterval(() => {
+      const items = document.querySelectorAll('.testimony');
+      if (!items.length) return;
+      const next = (currTestimony + 1) % items.length;
+      showTestimonial(next);
+    }, 8000);
 
-    window.open("https://wa.me/254732224624?text="+encodeURIComponent(msg));
-});
-</script>
-
+    // Booking form -> WhatsApp
+    document.getElementById('bookingForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      const data = new FormData(this);
+      const message =
+        `APPOINTMENT REQUEST:%0A` +
+        `Name: ${data.get('name')}%0A` +
+        `Phone: ${data.get('phone')}%0A` +
+        `Branch: ${data.get('branch')}%0A` +
+        `Service: ${data.get('service')}%0A` +
+        `Date: ${data.get('date')}%0A` +
+        `Notes: ${data.get('notes') || '-'}`;
+      window.open(`https://wa.me/254732224624?text=${message}`, '_blank');
+    });
+  </script>
 </body>
 </html>
